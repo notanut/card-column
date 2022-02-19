@@ -1,0 +1,176 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+    padding: 5.5rem 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+section {
+    display: flex;
+    max-width: 920px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+    font-size: 2.5rem;
+    padding: 2.5rem 0;
+}
+
+.one, .two, .three {
+  padding: 3rem;
+}
+
+.one {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.two {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.three {
+    background-color: hsl(179, 100%, 13%);
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.9375rem;
+  padding-bottom: 5.5rem;
+}
+
+button {
+  background-color: hsl(0, 0%, 95%);
+  outline: none;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  transition: .3s all ease-in;
+}
+
+button:hover {
+  border-color: hsl(0, 0%, 95%);
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+.one button{
+  color: hsl(31, 77%, 52%);
+}
+
+.two button{
+  color: hsl(184, 100%, 22%);
+}
+
+.three button {
+  color: hsl(179, 100%, 13%);
+}
+
+.one button:hover {
+  color: hsl(0, 0%, 95%);
+}
+.two button:hover {
+  color: hsl(0, 0%, 95%);
+}
+
+.three button:hover {
+  color: hsl(0, 0%, 95%);
+}
+
+
+@media screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+
+  h1 {
+    padding: 2rem 0;
+  }
+
+  p {
+    padding-bottom: 1.75rem;
+  }
+}
